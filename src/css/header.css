@@ -1,13 +1,19 @@
 .header-wrapper .nav-list {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	height: 100%;
 	padding: 0;
 	margin: 0;
 }
 
 .header-wrapper .nav-list li {
+	color: #98332d;
 	list-style: none;
 	margin-right: 10px;
+}
+
+.header-wrapper .nav-list li a {
+	color: #98332d;
+	text-decoration: none;
 }

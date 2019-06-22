@@ -46,7 +46,7 @@ class LoginScreen extends Component<any> {
 										onChange={this.handleChange}
 									/>
 								</FormGroup>
-								<Button>Login</Button>
+								<Button color="primary">Login</Button>
 							</Form>
 						</Col>
 					</Row>

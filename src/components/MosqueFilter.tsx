@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from 'reactstrap';
 import wudhu from '../assets/wudhu.png';
 import wheelchair from '../assets/wheelchair.png';
 import women from '../assets/women.png';
@@ -30,32 +28,37 @@ class MosqueFilter extends React.Component<any> {
 		return (
 			<>
 				<div className="filter-option">
-					<img src={wudhu} />
+					<div className="custom-icon-wrapper">Ab</div>
+					<h6>Name</h6>
+				</div>
+
+				<div className="filter-option">
+					<img src={wudhu} alt="wudhu" />
 					<h6>Wudhu</h6>
 				</div>
 
 				<div className="filter-option">
-					<img src={prayer} />
+					<img src={prayer} alt="prayer" />
 					<h6>Prayer</h6>
 				</div>
 
 				<div className="filter-option">
-					<img src={wheelchair} />
+					<img src={wheelchair} alt="wheelchair" />
 					<h6>Wheelchair</h6>
 				</div>
 
 				<div className="filter-option">
-					<img src={aircon} />
+					<img src={aircon} alt="aircon" />
 					<h6>Aircon</h6>
 				</div>
 
 				<div className="filter-option">
-					<img src={committe} />
+					<img src={committe} alt="comittee" />
 					<h6>Committee</h6>
 				</div>
 
 				<div className="filter-option">
-					<img src={women} />
+					<img src={women} alt="women" />
 					<h6>Women</h6>
 				</div>
 			</>
@@ -74,15 +77,7 @@ class MosqueFilter extends React.Component<any> {
 		return (
 			<div id="filter-pop-up-panel">
 				<div className="pop-up" ref="filterPanel">
-					<div className="title">
-						<h5>Filter</h5>
-					</div>
-
 					<div className="filter-scroll-panel">{this.getFilters()}</div>
-
-					<div className="filter-btn-panel">
-						<Button block>Apply Filter</Button>
-					</div>
 				</div>
 			</div>
 		);

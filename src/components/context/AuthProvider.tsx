@@ -4,6 +4,7 @@ import Context from './AuthContext';
 class AuthProvider extends Component<any> {
 	state = {
 		authenticated: false,
+		user: null,
 	};
 	handleLogin = (e: any, cb: any) => {
 		e.preventDefault();
@@ -11,12 +12,15 @@ class AuthProvider extends Component<any> {
 			this.setState(
 				{
 					authenticated: true,
+					user: {
+						name: 'Beard Technician',
+					},
 				},
 				cb,
 			);
 		}, 1500);
 	};
-	handleLogout = (e: any, cb: any) => {
+	handleLogout = (cb: any) => {
 		setTimeout(() => {
 			this.setState(
 				{

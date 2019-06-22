@@ -24,6 +24,10 @@
 	width: 100%;
 }
 
+.mosque-list-card-wrapper .mosque-list-card .mosque-thumbnail-wrapper img {
+	width: 100%;
+}
+
 .mosque-list-card-wrapper .mosque-details-wrapper {
 	z-index: 10;
 	color: #fff;
@@ -36,4 +40,13 @@
 
 .mosque-list-card-wrapper .mosque-details-wrapper .mosque-details {
 	color: #fff;
+	text-align: center;
+}
+
+.mosque-list-card-link {
+	text-decoration: none;
+}
+
+.mosque-list-card-link:hover {
+	text-decoration: none;
 }

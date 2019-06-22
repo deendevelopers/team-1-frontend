@@ -6,7 +6,7 @@ import '../css/MosqueListCard.css';
 class MosqueListCard extends Component<any> {
 	render() {
 		return (
-			<Link to={`/mosque/${this.props.id}`}>
+			<Link className="mosque-list-card-link" to={`/mosque/${this.props.id}`}>
 				<div className="mosque-list-card-wrapper">
 					<div className="mosque-list-card">
 						<div className="mosque-thumbnail-wrapper">
