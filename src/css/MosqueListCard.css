@@ -26,6 +26,9 @@
 
 .mosque-list-card-wrapper .mosque-list-card .mosque-thumbnail-wrapper img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: bottom;
 }
 
 .mosque-list-card-wrapper .mosque-details-wrapper {

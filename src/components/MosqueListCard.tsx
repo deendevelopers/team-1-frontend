@@ -11,7 +11,7 @@ class MosqueListCard extends Component<any> {
 					<div className="mosque-list-card">
 						<div className="mosque-thumbnail-wrapper">
 							<img
-								src="https://source.unsplash.com/400x400/?mosque"
+								src={ "https://source.unsplash.com/400x400/?mosque&sig=" + Math.random() }
 								alt="thumbnail"
 							/>
 						</div>
