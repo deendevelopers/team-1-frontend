@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MosqueListCard from '../components/MosqueListCard';
 import '../css/MosqueList.css';
 import Layout from '../components/Layout';
+import MosqueFilter from "../components/MosqueFilter"
 
 class MosqueList extends Component {
 	goToMosque = (id: number) => {
@@ -28,7 +29,26 @@ class MosqueList extends Component {
 					<a href="/mosque/3">
 						<MosqueListCard />
 					</a>
+
+					<a href="/mosque/3">
+						<MosqueListCard />
+					</a>
+
+					<a href="/mosque/3">
+						<MosqueListCard />
+					</a>
+
+					<a href="/mosque/3">
+						<MosqueListCard />
+					</a>
+
+					<a href="/mosque/3">
+						<MosqueListCard />
+					</a>
 				</div>
+
+				{/* // todo: dynamically show/hide the MosqueFilter */}
+				<MosqueFilter></MosqueFilter>
 			</Layout>
 		);
 	}
