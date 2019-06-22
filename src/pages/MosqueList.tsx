@@ -15,7 +15,7 @@ class MosqueList extends Component {
 		windowWidth: 0,
 	};
 	async componentDidMount() {
-		window.addEventListener('load', this.handleResize);
+		this.handleResize();
 		window.addEventListener('resize', this.handleResize);
 		const response = await fetch(
 			'https://frontrow-fe.herokuapp.com/fr/mosques/',
