@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import { Logo } from './svgs';
-
 import '../css/header.css';
 import withAuthContext from './context/withAuth';
 

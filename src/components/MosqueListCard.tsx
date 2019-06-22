@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import "../css/MosqueListCard.css";
+import { Link } from 'react-router-dom';
 
-class MosqueListCard extends Component {
+import '../css/MosqueListCard.css';
+
+class MosqueListCard extends Component<any> {
 	render() {
 		return (
-			<>
-                <div className="mosque-list-card-wrapper">
+			<Link to={`/mosque/${this.props.id}`}>
+				<div className="mosque-list-card-wrapper">
 					<div className="mosque-list-card">
 						<div className="mosque-thumbnail-wrapper">
-							<img src="https://source.unsplash.com/800x300/?mosque" alt="thumbnail"></img>
+							<img
+								src="https://source.unsplash.com/400x400/?mosque"
+								alt="thumbnail"
+							/>
 						</div>
 
 						<div className="mosque-details-wrapper">
 							<div className="mosque-details">
-								<h3>Mosque Name</h3>
-								Details for mosque here
+								<h3>{this.props.name}</h3>
 							</div>
 						</div>
 					</div>
 				</div>
-			</>
+			</Link>
 		);
 	}
 }

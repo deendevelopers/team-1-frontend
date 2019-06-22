@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { compose } from 'recompose';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Layout from '../components/Layout';
 import { Row, Container, Col } from 'reactstrap';
 import withAuthContext from '../components/context/withAuth';
+import { withRouter } from 'react-router';
 
 class LoginScreen extends Component<any> {
 	handleChange = (e: any) => {
@@ -11,19 +13,20 @@ class LoginScreen extends Component<any> {
 			[name]: value,
 		});
 	};
-	handleSubmit = (e: any) => {
-		e.preventDefault();
-		console.log(this.state);
-		this.props.history.push('/list');
-	};
 	render() {
-		console.log(this.props);
+		const { handleLogin } = this.props.context;
 		return (
 			<Layout>
 				<Container>
 					<Row>
 						<Col xs="12">
-							<Form onSubmit={this.handleSubmit}>
+							<Form
+								onSubmit={e => {
+									handleLogin(e, () => {
+										this.props.history.push('/list');
+									});
+								}}
+							>
 								<FormGroup className="text-left">
 									<Label for="email">Email</Label>
 									<Input
@@ -53,4 +56,7 @@ class LoginScreen extends Component<any> {
 	}
 }
 
-export default withAuthContext(LoginScreen);
+export default compose(
+	withAuthContext,
+	withRouter,
+)(LoginScreen);

@@ -1,5 +1,11 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 
-const Context = createContext({});
+type ContextProps = {
+	authenticated: boolean;
+	handleLogin: Function;
+	handleLogout: Function;
+};
+
+const Context = createContext<Partial<ContextProps>>({});
 
 export default Context;
