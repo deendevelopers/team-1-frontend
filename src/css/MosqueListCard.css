@@ -1,0 +1,38 @@
+.mosque-list-card-wrapper {
+    padding: 0.5rem;
+}
+
+.mosque-list-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    height: 10rem;
+    position: relative;
+    align-items: center;
+}
+
+.mosque-list-card .mosque-thumbnail-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mosque-thumbnail-wrapper img {
+    object-fit: cover;
+}
+
+.mosque-details-wrapper {
+    z-index: 10;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.mosque-details-wrapper .mosque-details {
+    color: #fff;
+}
