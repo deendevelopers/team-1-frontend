@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Layout from '../components/Layout';
 import { Row, Container, Col } from 'reactstrap';
+import withAuthContext from '../components/context/withAuth';
 
 class LoginScreen extends Component<any> {
 	handleChange = (e: any) => {
@@ -16,6 +17,7 @@ class LoginScreen extends Component<any> {
 		this.props.history.push('/list');
 	};
 	render() {
+		console.log(this.props);
 		return (
 			<Layout>
 				<Container>
@@ -51,4 +53,4 @@ class LoginScreen extends Component<any> {
 	}
 }
 
-export default LoginScreen;
+export default withAuthContext(LoginScreen);
