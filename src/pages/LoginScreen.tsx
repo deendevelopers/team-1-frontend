@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Layout from '../components/Layout';
 import { Row, Container, Col } from 'reactstrap';
 
-class LoginScreen extends Component {
+class LoginScreen extends Component<any> {
 	handleChange = (e: any) => {
 		const { name, value } = e.target;
 		this.setState({
@@ -13,6 +13,7 @@ class LoginScreen extends Component {
 	handleSubmit = (e: any) => {
 		e.preventDefault();
 		console.log(this.state);
+		this.props.history.push('/list');
 	};
 	render() {
 		return (
