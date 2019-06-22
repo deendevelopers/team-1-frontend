@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { IonApp, IonPage, IonRouterOutlet } from '@ionic/react';
 import LoginScreen from './pages/LoginScreen';
 import MosqueList from './pages/MosqueList';
+import MosqueScreen from './pages/MosqueScreen';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
               <IonRouterOutlet>
                 <Route exact path="/" component={LoginScreen} />
                 <Route exact path="/list" component={MosqueList} />
+                <Route exact path="/mosque/:id" component={MosqueScreen} />
               </IonRouterOutlet>
             </IonPage>
           </IonApp>
