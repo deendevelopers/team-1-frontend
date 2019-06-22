@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import wudhu from '../assets/wudhu.png';
 import wheelchair from '../assets/wheelchair.png';
 import women from '../assets/women.png';
@@ -12,23 +12,21 @@ import '../css/MosqueFilter.css';
 import ReactDOM from 'react-dom';
 
 class MosqueFilter extends React.Component<any> {
+	// componentDidMount() {
+	//     setTimeout(() => {
+	//         document.addEventListener('click', this.handleClickOutside, true);
+	//     }, 1000);
 
-    // componentDidMount() {
-    //     setTimeout(() => {
-    //         document.addEventListener('click', this.handleClickOutside, true);
-    //     }, 1000);
+	//     this.setState({
 
-    //     this.setState({
+	//     })
+	// }
 
-    //     })
-    // }
+	// componentWillUnmount() {
+	//     document.removeEventListener('click', this.handleClickOutside, true);
+	// }
 
-    // componentWillUnmount() {
-    //     document.removeEventListener('click', this.handleClickOutside, true);
-    // }
-
-    getFilters() {
-
+	getFilters() {
 		return (
 			<>
 				<div className="filter-option">
@@ -61,36 +59,34 @@ class MosqueFilter extends React.Component<any> {
 					<h6>Women</h6>
 				</div>
 			</>
-		)
-    }
+		);
+	}
 
-    handleClickOutside(event: any) {
-        const domNode = ReactDOM.findDOMNode(this.refs.filterPanel)
+	handleClickOutside(event: any) {
+		const domNode = ReactDOM.findDOMNode(this.refs.filterPanel);
 
-        if (!domNode || !domNode.contains(event.target)) {
-            this.props.dismissed();
-        }
-    }
+		if (!domNode || !domNode.contains(event.target)) {
+			this.props.dismissed();
+		}
+	}
 
-    render() {
-        return (
-            <div id="filter-pop-up-panel">
-                <div className="pop-up" ref="filterPanel">
-                    <div className="title">
-                        <h5>Filter</h5>
-                    </div>
-                    
-                    <div className="filter-scroll-panel">
-                        {this.getFilters()}
-                    </div>
-                
-                    <div className="filter-btn-panel">
+	render() {
+		return (
+			<div id="filter-pop-up-panel">
+				<div className="pop-up" ref="filterPanel">
+					<div className="title">
+						<h5>Filter</h5>
+					</div>
+
+					<div className="filter-scroll-panel">{this.getFilters()}</div>
+
+					<div className="filter-btn-panel">
 						<Button block>Apply Filter</Button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default MosqueFilter;

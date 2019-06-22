@@ -9,6 +9,7 @@ class MosqueList extends Component {
 	state = {
 		items: [],
 		loading: true,
+		filter: false,
 	};
 	async componentDidMount() {
 		const response = await fetch(
@@ -20,11 +21,18 @@ class MosqueList extends Component {
 		});
 	}
 
+	handleClick = () => {
+		this.setState({
+			filter: !this.state.filter,
+		});
+	};
+
 	render() {
-		const { items, loading } = this.state;
+		const { items, loading, filter } = this.state;
 		return (
 			<Layout>
 				<div className="mosque-list-container">
+					<button onClick={this.handleClick}>Filter</button>
 					{loading ? (
 						<p className="text-center">Loading...</p>
 					) : (
@@ -35,7 +43,7 @@ class MosqueList extends Component {
 				</div>
 
 				{/* // todo: dynamically show/hide the MosqueFilter */}
-				<MosqueFilter />
+				{filter && <MosqueFilter />}
 			</Layout>
 		);
 	}
