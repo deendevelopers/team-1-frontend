@@ -1,6 +1,11 @@
 .mosque-list-card-wrapper {
 	padding: 0.5rem;
 	height: 10rem;
+	transition: all 0.6s ease-in-out;
+}
+
+.mosque-list-card-wrapper.active {
+	padding: 0;
 }
 
 .mosque-list-card-wrapper .mosque-list-card {
@@ -15,6 +20,7 @@
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 	background: #98332d;
 }
+
 
 .mosque-list-card-wrapper .mosque-list-card .mosque-thumbnail-wrapper {
 	position: absolute;
