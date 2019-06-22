@@ -3,7 +3,7 @@
     height: 10rem;
 }
 
-.mosque-list-card {
+.mosque-list-card-wrapper .mosque-list-card {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -15,7 +15,7 @@
     box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
 }
 
-.mosque-list-card .mosque-thumbnail-wrapper {
+.mosque-list-card-wrapper .mosque-list-card .mosque-thumbnail-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,11 +23,11 @@
     width: 100%;
 }
 
-.mosque-thumbnail-wrapper img {
+.mosque-list-card-wrapper .mosque-thumbnail-wrapper img {
     object-fit: cover;
 }
 
-.mosque-details-wrapper {
+.mosque-list-card-wrapper .mosque-details-wrapper {
     z-index: 10;
     color: #fff;
     height: 100%;
@@ -36,6 +36,6 @@
     align-content: center;
 }
 
-.mosque-details-wrapper .mosque-details {
+.mosque-list-card-wrapper .mosque-details-wrapper .mosque-details {
     color: #fff;
 }
