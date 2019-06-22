@@ -1,0 +1,13 @@
+.header-wrapper .nav-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.header-wrapper .nav-list li {
+	list-style: none;
+	margin-right: 10px;
+}

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Layout from '../components/Layout';
 import { Row, Container, Col } from 'reactstrap';
 
-class LoginScreen extends Component {
+class RegisterScreen extends Component {
 	render() {
 		return (
 			<Layout>
 				<Container>
 					<Row>
-						<Col xs="12">Login Page</Col>
+						<Col xs="12">Register Page</Col>
 					</Row>
 				</Container>
 			</Layout>
@@ -16,4 +16,4 @@ class LoginScreen extends Component {
 	}
 }
 
-export default LoginScreen;
+export default RegisterScreen;
