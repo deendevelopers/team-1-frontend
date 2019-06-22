@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MosqueListCard from '../components/MosqueListCard';
 import Layout from '../components/Layout';
+import MosqueFilter from '../components/MosqueFilter';
 
 import '../css/MosqueList.css';
 
@@ -32,6 +33,9 @@ class MosqueList extends Component {
 						})
 					)}
 				</div>
+
+				{/* // todo: dynamically show/hide the MosqueFilter */}
+				<MosqueFilter />
 			</Layout>
 		);
 	}
