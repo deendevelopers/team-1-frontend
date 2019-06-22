@@ -6,7 +6,8 @@ class LoginScreen extends Component {
 		return (
 			<>
                 <img src={logo} alt="logo"></img>
-				Big man ting
+				
+				<a href="/list">See All Mosques</a>
 			</>
 		);
 	}
