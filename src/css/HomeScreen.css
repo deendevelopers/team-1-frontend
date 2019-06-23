@@ -1,0 +1,9 @@
+.hero-button-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.hero-button-wrapper > a {
+	margin-right: 10px;
+}

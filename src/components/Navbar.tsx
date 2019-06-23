@@ -27,8 +27,10 @@ class Header extends React.Component<any> {
 		return (
 			<div>
 				<Navbar light expand="md">
-					<NavbarBrand href="/">
-						<Logo />
+					<NavbarBrand>
+						<Link to="/">
+							<Logo />
+						</Link>
 					</NavbarBrand>
 					<NavbarToggler onClick={this.toggle} />
 					<Collapse isOpen={this.state.isOpen} navbar>

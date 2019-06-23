@@ -11,6 +11,10 @@
 	text-align: center;
 }
 
+.mosque-details-wrapper .mosque-details-content > div {
+	margin-bottom: 10px;
+}
+
 .custom-accordion-trigger {
 	padding: 0 !important;
 	background-color: transparent !important;

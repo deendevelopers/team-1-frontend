@@ -7,6 +7,7 @@ import MosqueScreen from './pages/MosqueScreen';
 import AuthProvider from './components/context/AuthProvider';
 import withAuthContext from './components/context/withAuth';
 import FeedScreen from './pages/FeedScreen';
+import HomeScreen from './pages/HomeScreen';
 
 class App extends Component {
 	render() {
@@ -14,7 +15,8 @@ class App extends Component {
 			<AuthProvider>
 				<Router>
 					<div className="App">
-						<Route exact path="/" component={LoginScreen} />
+						<Route exact path="/" component={HomeScreen} />
+						<Route exact path="/login" component={LoginScreen} />
 						<Route exact path="/feed" component={FeedScreen} />
 						<Route exact path="/register" component={RegisterScreen} />
 						<Route exact path="/list" component={MosqueList} />
