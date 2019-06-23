@@ -11,10 +11,7 @@ class HomeScreen extends Component {
 			<Layout>
 				<Jumbotron>
 					<h1 className="display-3">Front Row!</h1>
-					<p className="lead">
-						This is a simple hero unit, a simple Jumbotron-style component for
-						calling extra attention to featured content or information.
-					</p>
+					<p className="lead">be on the front row of meaningful information</p>
 					<div className="hero-button-wrapper">
 						<Link to="/list">
 							<Button color="primary">Mosques</Button>
