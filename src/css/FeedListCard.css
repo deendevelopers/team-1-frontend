@@ -1,0 +1,25 @@
+.feed-list-card-wrapper {
+	padding: 0.5rem;
+	transition: all 0.6s ease-in-out;
+}
+
+.feed-list-card-wrapper.active {
+	padding: 0;
+}
+
+.feed-list-card-wrapper .feed-list-card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: relative;
+	transition: all 0.3s ease;
+	border-bottom: solid 1px #98332d;
+}
+
+.feed-list-card-wrapper .author-meta {
+	font-size: 0.8rem;
+	font-style: italic;
+	color: #e9b7b4;
+}

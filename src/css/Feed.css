@@ -1,0 +1,27 @@
+.feed-wrapper {
+	height: 40vh;
+	overflow-x: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.feed-wrapper .comments-wrapper {
+	overflow-y: scroll
+}
+
+.feed-wrapper span.category {
+	margin-right: 5px;
+	padding: 0.2rem;
+	background: #98332d;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.feed-wrapper .comments-filter-wrapper {
+	font-size: 0.8rem;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: row;
+	min-height: 2rem;
+}

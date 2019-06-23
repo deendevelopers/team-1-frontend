@@ -10,6 +10,7 @@ import {
 	InputGroup,
 	Input,
 } from 'reactstrap';
+import Feed from './Feed';
 
 class CustomModal extends React.Component<any> {
 	state = {
@@ -47,7 +48,9 @@ class CustomModal extends React.Component<any> {
 			<div>
 				<Modal isOpen={this.props.modal} className={this.props.className}>
 					<ModalHeader>Comments</ModalHeader>
-					<ModalBody>{this.props.children}</ModalBody>
+					<ModalBody>
+						<Feed id={this.state.mosqueId}></Feed>
+					</ModalBody>
 					<ModalFooter>
 						<Row className="m-0 align-items-center w-100">
 							<Col className="pl-0" xs="6" sm="6" md="6" lg="6">
