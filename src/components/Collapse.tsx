@@ -7,6 +7,14 @@ class CustomCollapse extends Component<any> {
 		collapse: false,
 	};
 
+	componentDidMount() {
+		if (this.props.open) {
+			this.setState({
+				collapse: this.props.open,
+			});
+		}
+	}
+
 	toggle = () => {
 		this.setState(state => ({ collapse: !this.state.collapse }));
 	};

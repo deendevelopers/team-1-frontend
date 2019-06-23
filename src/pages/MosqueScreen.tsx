@@ -21,7 +21,7 @@ class MosqueScreen extends Component {
 								<div className="mosque-details-content">
 									<h1>Mosque Name</h1>
 
-									<Collapse title="Description">
+									<Collapse title="Description" open>
 										This mosque is a great place to pray.
 									</Collapse>
 
