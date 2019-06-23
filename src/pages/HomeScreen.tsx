@@ -19,9 +19,6 @@ class HomeScreen extends Component {
 						<Link to="/list">
 							<Button color="primary">Mosques</Button>
 						</Link>
-						<Link to="/feed">
-							<Button color="primary">Feed</Button>
-						</Link>
 					</div>
 				</Jumbotron>
 			</Layout>

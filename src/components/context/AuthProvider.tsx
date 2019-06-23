@@ -6,6 +6,7 @@ class AuthProvider extends Component<any> {
 		authenticated: true,
 		user: {
 			name: 'User',
+			id: 1,
 		},
 	};
 	handleLogin = (e: any, cb: any) => {

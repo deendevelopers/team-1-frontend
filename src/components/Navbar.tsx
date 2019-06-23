@@ -43,11 +43,6 @@ class Header extends React.Component<any> {
 											Mosque
 										</Link>
 									</NavItem>
-									<NavItem>
-										<Link className="nav-link" to="/feed">
-											Feed
-										</Link>
-									</NavItem>
 									{/* <NavItem
 										className="dead-link"
 										onClick={() => {

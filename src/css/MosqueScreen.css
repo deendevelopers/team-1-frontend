@@ -1,7 +1,9 @@
-.mosque-details-wrapper .mosque-thumbnail-wrapper img {
-	width: 100%;
+.mosque-details-wrapper .mosque-thumbnail-wrapper {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 300px;
 }
-
 .mosque-details-wrapper .mosque-details-content {
 	padding: 15px 0;
 }
@@ -34,4 +36,28 @@
 
 .icon-wrapper.active svg {
 	transform: rotate(180deg);
+}
+
+.facilities-list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.facilities-list .facility-option {
+	margin-right: 15px;
+	text-align: center;
+}
+
+.facilities-list .facility-option img {
+	max-height: 64px;
+	max-width: 64px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.facilities-list {
+		justify-content: center;
+	}
 }

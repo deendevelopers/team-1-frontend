@@ -17,10 +17,21 @@
 	position: relative;
 	align-items: center;
 	border-radius: 1rem;
-	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
 	background: #98332d;
+	transition: all 0.3s ease;
+	border: 1px solid #ffffff;
 }
 
+.mosque-list-card-wrapper .mosque-list-card:hover {
+	background-color: #ef841f;
+	border: 1px solid #000000;
+}
+
+.mosque-list-card-wrapper .mosque-list-card:hover .mosque-details {
+	color: #000000;
+}
 
 .mosque-list-card-wrapper .mosque-list-card .mosque-thumbnail-wrapper {
 	position: absolute;

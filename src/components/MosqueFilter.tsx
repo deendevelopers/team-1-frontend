@@ -1,85 +1,23 @@
-import React from 'react';
-import wudhu from '../assets/wudhu.png';
-import wheelchair from '../assets/wheelchair.png';
-import women from '../assets/women.png';
-import aircon from '../assets/aircon.png';
-import committe from '../assets/committee.png';
-import prayer from '../assets/prayer-space.png';
+import React, { Component } from 'react';
 
 import '../css/MosqueFilter.css';
-import ReactDOM from 'react-dom';
+import { Container, Row, Col, InputGroup, Input } from 'reactstrap';
 
-class MosqueFilter extends React.Component<any> {
-	// componentDidMount() {
-	//     setTimeout(() => {
-	//         document.addEventListener('click', this.handleClickOutside, true);
-	//     }, 1000);
-
-	//     this.setState({
-
-	//     })
-	// }
-
-	// componentWillUnmount() {
-	//     document.removeEventListener('click', this.handleClickOutside, true);
-	// }
-
-	getFilters() {
-		return (
-			<>
-				<div className="filter-option">
-					<div className="custom-icon-wrapper">Ab</div>
-					<h6>Name</h6>
-				</div>
-
-				<div className="filter-option">
-					<img src={wudhu} alt="wudhu" />
-					<h6>Wudhu</h6>
-				</div>
-
-				<div className="filter-option">
-					<img src={prayer} alt="prayer" />
-					<h6>Prayer</h6>
-				</div>
-
-				<div className="filter-option">
-					<img src={wheelchair} alt="wheelchair" />
-					<h6>Wheelchair</h6>
-				</div>
-
-				<div className="filter-option">
-					<img src={aircon} alt="aircon" />
-					<h6>Aircon</h6>
-				</div>
-
-				<div className="filter-option">
-					<img src={committe} alt="comittee" />
-					<h6>Committee</h6>
-				</div>
-
-				<div className="filter-option">
-					<img src={women} alt="women" />
-					<h6>Women</h6>
-				</div>
-			</>
-		);
-	}
-
-	handleClickOutside(event: any) {
-		const domNode = ReactDOM.findDOMNode(this.refs.filterPanel);
-
-		if (!domNode || !domNode.contains(event.target)) {
-			this.props.dismissed();
-		}
-	}
-
+class MosqueFilter extends Component<any> {
 	render() {
 		return (
-			<div id="filter-pop-up-panel">
-				<div className="pop-up" ref="filterPanel">
-					<div className="filter-scroll-panel">{this.getFilters()}</div>
-				</div>
-			</div>
+			<Container>
+				<Row>
+					<Col>
+						<InputGroup className="filter-wrapper">
+							<Input
+								onChange={this.props.handleSearch}
+								placeholder="Search a masjid"
+							/>
+						</InputGroup>
+					</Col>
+				</Row>
+			</Container>
 		);
 	}
 }
