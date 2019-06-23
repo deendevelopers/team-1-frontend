@@ -3,8 +3,10 @@ import Context from './AuthContext';
 
 class AuthProvider extends Component<any> {
 	state = {
-		authenticated: false,
-		user: null,
+		authenticated: true,
+		user: {
+			name: 'User',
+		},
 	};
 	handleLogin = (e: any, cb: any) => {
 		e.preventDefault();
@@ -13,7 +15,7 @@ class AuthProvider extends Component<any> {
 				{
 					authenticated: true,
 					user: {
-						name: 'Beard Technician',
+						name: 'User',
 					},
 				},
 				cb,

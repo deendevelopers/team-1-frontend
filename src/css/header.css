@@ -17,3 +17,9 @@
 	color: #98332d;
 	text-decoration: none;
 }
+
+.dead-link {
+	display: block;
+	padding: 0.5rem;
+	color: rgba(0, 0, 0, 0.5);
+}
