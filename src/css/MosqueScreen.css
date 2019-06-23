@@ -1,6 +1,33 @@
-.mosque-screen-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow: hidden;
+.mosque-details-wrapper .mosque-thumbnail-wrapper img {
+	width: 100%;
+}
+
+.mosque-details-wrapper .mosque-details-content {
+	padding: 15px 0;
+}
+
+.mosque-details-wrapper .mosque-details-content h1 {
+	font-size: 30px;
+	text-align: center;
+}
+
+.custom-accordion-trigger {
+	padding: 0 !important;
+	background-color: transparent !important;
+	color: #000 !important;
+	border-color: transparent !important;
+}
+
+.icon-wrapper {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.icon-wrapper svg {
+	transform: rotate(0deg);
+	transition: all 0.3s ease;
+}
+
+.icon-wrapper.active svg {
+	transform: rotate(180deg);
 }
