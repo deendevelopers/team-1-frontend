@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../css/MosqueListCard.css';
 import { CommentIcon } from './svgs';
 import Modal from './Modal';
+import withAuthContext from './context/withAuth';
 
 class MosqueListCard extends Component<any> {
 	state = {
@@ -70,6 +71,7 @@ class MosqueListCard extends Component<any> {
 					<span>Comments</span> <CommentIcon />
 				</div>
 				<Modal
+					userId={this.props.context.user.id}
 					mosqueId={this.props.id}
 					closeModal={this.closeModal}
 					modal={modalOpen}
@@ -81,4 +83,4 @@ class MosqueListCard extends Component<any> {
 	}
 }
 
-export default MosqueListCard;
+export default withAuthContext(MosqueListCard);

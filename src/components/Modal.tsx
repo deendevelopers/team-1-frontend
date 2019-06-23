@@ -12,8 +12,9 @@ import {
 } from 'reactstrap';
 
 class CustomModal extends React.Component<any> {
-	state = {
+	state: any = {
 		mosqueId: this.props.mosqueId,
+		comments: [],
 	};
 
 	handleChange = (e: any) => {
@@ -23,26 +24,37 @@ class CustomModal extends React.Component<any> {
 		});
 	};
 
+	async componentDidMount() {
+		const response = await fetch(
+			`https://frontrow-fe.herokuapp.com/fr/mosques/${
+				this.state.mosqueId
+			}/comments`,
+		).then(res => res.json());
+		this.setState({
+			comments: response,
+		});
+	}
+
 	handleSubmit = (e: any) => {
 		e.preventDefault();
-
-		// mosques/{mosque_id}/comments
-		// fetch(
-		// 	`https://frontrow-fe.herokuapp.com/fr/mosques/${
-		// 		this.state.mosqueId
-		// 	}/comments`,
-		// 	{
-		// 		method: 'POST',
-		// 		credentials: 'include',
-		// 		body: JSON.stringify(this.state),
-		// 	},
-		// );
-
-		// mosques / { mosque_id } / comments;
+		fetch(
+			`https://frontrow-fe.herokuapp.com/fr/mosques/${
+				this.props.mosqueId
+			}/comments`,
+			{
+				method: 'POST',
+				credentials: 'include',
+				body: JSON.stringify({
+					user_id: 1,
+					category_name: this.state.category,
+					comment_type: this.state.type,
+					comment: this.state.comment,
+				}),
+			},
+		);
 	};
 
 	render() {
-		console.log(this.state);
 		return (
 			<div>
 				<Modal isOpen={this.props.modal} className={this.props.className}>
@@ -98,7 +110,9 @@ class CustomModal extends React.Component<any> {
 									<Button color="primary" onClick={this.props.closeModal}>
 										Close
 									</Button>
-									<Button color="primary">Submit</Button>
+									<Button color="primary" onClick={this.handleSubmit}>
+										Submit
+									</Button>
 								</div>
 							</Col>
 						</Row>
