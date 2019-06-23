@@ -7,13 +7,13 @@
 }
 
 .feed-wrapper .comments-wrapper {
-	overflow-y: scroll
+	overflow-y: scroll;
 }
 
 .feed-wrapper span.category {
 	margin-right: 5px;
 	padding: 0.2rem;
-	background: #98332d;
+	background: #ffbe76;
 	color: #fff;
 	border-radius: 2px;
 }
@@ -24,4 +24,11 @@
 	display: flex;
 	flex-direction: row;
 	min-height: 2rem;
+}
+
+.feed-button-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }

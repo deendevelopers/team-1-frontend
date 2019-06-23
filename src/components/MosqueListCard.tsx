@@ -68,7 +68,7 @@ class MosqueListCard extends Component<any> {
 					</div>
 				</Link>
 				<div className="message-cta" onClick={this.openModal}>
-					<span>Comments</span> <CommentIcon />
+					<CommentIcon />
 				</div>
 				<Modal
 					userId={this.props.context.user.id}
