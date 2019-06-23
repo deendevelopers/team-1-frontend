@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../css/MosqueListCard.css';
+import { CommentIcon } from './svgs';
+import Modal from './Modal';
 
 class MosqueListCard extends Component<any> {
 	state = {
 		isActive: false,
+		modalOpen: false,
 	};
 
 	componentDidMount() {
@@ -34,19 +37,26 @@ class MosqueListCard extends Component<any> {
 		document.removeEventListener('scroll', event => {});
 	}
 
-	handleScroll() {}
+	openModal = () => {
+		this.setState({
+			modalOpen: true,
+		});
+	};
+
+	closeModal = () => {
+		this.setState({
+			modalOpen: false,
+		});
+	};
 
 	render() {
+		const { modalOpen, isActive } = this.state;
 		return (
-			<Link
-				className="mosque-list-card-link"
-				id={`mosque-card-${this.props.id}`}
-				to={`/mosque/${this.props.id}`}
-			>
-				<div
-					className={
-						'mosque-list-card-wrapper ' + (this.state.isActive ? 'active' : '')
-					}
+			<div className={'mosque-list-card-wrapper ' + (isActive ? 'active' : '')}>
+				<Link
+					className="mosque-list-card-link"
+					id={`mosque-card-${this.props.id}`}
+					to={`/mosque/${this.props.id}`}
 				>
 					<div className="mosque-list-card">
 						<div className="mosque-details-wrapper">
@@ -55,8 +65,18 @@ class MosqueListCard extends Component<any> {
 							</div>
 						</div>
 					</div>
+				</Link>
+				<div className="message-cta" onClick={this.openModal}>
+					<span>Comments</span> <CommentIcon />
 				</div>
-			</Link>
+				<Modal
+					mosqueId={this.props.id}
+					closeModal={this.closeModal}
+					modal={modalOpen}
+				>
+					<div>{this.props.name}</div>
+				</Modal>
+			</div>
 		);
 	}
 }

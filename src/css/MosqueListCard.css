@@ -2,6 +2,7 @@
 	padding: 0.5rem;
 	height: 10rem;
 	transition: all 0.6s ease-in-out;
+	margin-bottom: 35px;
 }
 
 .mosque-list-card-wrapper.active {
@@ -22,6 +23,18 @@
 	background: #98332d;
 	transition: all 0.3s ease;
 	border: 1px solid #ffffff;
+}
+
+.mosque-list-card-wrapper .message-cta {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 10px 10px 0 0;
+}
+
+.mosque-list-card-wrapper .message-cta span {
+	display: inline-block;
+	margin-right: 5px;
 }
 
 .mosque-list-card-wrapper .mosque-list-card:hover {
@@ -69,4 +82,19 @@
 
 .mosque-list-card-link:hover {
 	text-decoration: none;
+}
+
+.modal-button-wrapper {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.modal-button-wrapper > button {
+	margin-right: 15px;
+}
+
+.modal-button-wrapper > button:last-child {
+	margin-right: 0;
 }

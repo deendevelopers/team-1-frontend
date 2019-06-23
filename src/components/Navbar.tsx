@@ -23,7 +23,7 @@ class Header extends React.Component<any> {
 		});
 	};
 	render() {
-		const { authenticated, user, handleLogout } = this.props.context;
+		const { authenticated, user } = this.props.context;
 		return (
 			<div>
 				<Navbar light expand="md">
