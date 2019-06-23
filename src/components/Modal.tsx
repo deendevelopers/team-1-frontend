@@ -76,13 +76,13 @@ class CustomModal extends React.Component<any> {
 										comments.map((item: any) => {
 											return (
 												<React.Fragment>
-													<Col xs="1">
+													<Col xs="2">
 														<div className="feed-arrow-list">
 															<FeedArrowUp />
 															<FeedArrowDown />
 														</div>
 													</Col>
-													<Col xs="11">
+													<Col xs="10">
 														<FeedListCard item={item} />
 													</Col>
 												</React.Fragment>
